@@ -23,7 +23,7 @@ public class ProdutosModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Gerar valor (automaticamente)/ E de forma gradual
     private Long codigo;
 
-    @Column(length = 100, nullable = false )
+    @Column(length = 100, nullable = false)
     private String nome;
 
     @Column(length = 10, nullable = false) // Fazer para cada atributo o @Column (para especificar)/ menos no id
