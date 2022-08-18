@@ -1,6 +1,7 @@
 package com.aula42.listaDeProdutos.controller;
 
 import com.aula42.listaDeProdutos.model.ProdutosModel;
+import com.aula42.listaDeProdutos.model.valoresprodutos.CalculoDesconto;
 import com.aula42.listaDeProdutos.service.ProdutosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,8 +29,8 @@ public class ProdutosController {
 
     @PostMapping(path = "/produtos") // Indica ser um método post
     @ResponseStatus(HttpStatus.CREATED)  //Para retornar uma resposta após o post inserir a informação
-    public ProdutosModel cadastrarProdutos(@RequestBody ProdutosModel produtosModel) {
-        return produtosService.cadastrar(produtosModel);
+    public ProdutosModel cadastrarProdutos(@RequestBody ProdutosModel produtosModel, CalculoDesconto calculoDesconto) {
+        return produtosService.cadastrar(produtosModel, calculoDesconto);
     }
 
     @PutMapping(path = "/produtos/{codigo}") // Não precisa de Optional, pois nunca vai ser vazio

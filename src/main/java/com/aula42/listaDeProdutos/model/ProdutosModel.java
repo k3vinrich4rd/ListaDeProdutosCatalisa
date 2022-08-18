@@ -28,4 +28,19 @@ public class ProdutosModel {
 
     @Column(length = 10, nullable = false) // Fazer para cada atributo o @Column (para especificar)/ menos no id
     private Double valor;
+
+    @Column(name = "porcentagem_desconto", length = 100, nullable = false)
+    private Double porcentagemDesconto;
+
+    @Column(name = "valor_desconto", length = 100, nullable = false)
+    private Double valorDesconto;
+
+    @Column(name = "valor_icms", length = 100, nullable = false)
+    private Double valorIcms;
+
+    @Column(name = "valor_final",length = 10, nullable = false)
+    private Double valorFinal;
 }
+
+
+
